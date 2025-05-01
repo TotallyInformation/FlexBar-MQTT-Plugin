@@ -1,0 +1,107 @@
+{
+    "name": "MqttPlugin",
+    "uuid": "com.totallyinformation.mqttplugin",
+    "version": "1.0.0",
+    "author": "Totally Information (Julian Knight)",
+    "entry": "backend/plugin.cjs",
+    "description": "Send and recieve custom data to/from an MQTT broker.",
+    "repo": "https://github.com/TotallyInformation/FlexBarMQTT",
+    "sdk": {
+        "version": "1.0.0"
+    },
+    "software": {
+        "minimumVersion": "1.0.0"
+    },
+    "os": [
+        {
+            "platform": "mac",
+            "minimumVersion": "10.15"
+        },
+        {
+            "platform": "windows",
+            "minimumVersion": "10"
+        }
+    ],
+    "device": [
+        {
+            "name": "flexbar",
+            "version": "1.0.0"
+        }
+    ],
+    "configPage": "",
+    "keyLibrary": {
+        "title": "$PluginName",
+        "style": {
+            "icon": "mdi mdi-quality-medium"
+        },
+        "children": [
+            {
+                "title": "$MqttSend.Title",
+                "tip": "$MqttSend.Tip",
+                "cid": "com.totallyinformation.mqttplugin.MqttSend",
+                "config": {
+                    "keyType": "default",
+                    "clickable": true,
+                    "platform": [
+                        "windows",
+                        "linux",
+                        "mac"
+                    ]
+                },
+                "style": {
+                    "icon": "mdi mdi-gesture-tap-button",
+                    "width": 240
+                },
+                "data": {
+                    "broker": "",
+                    "topic": "",
+                    "value": ""
+                }
+            },
+            {
+                "title": "$MqttSubscribe.Title",
+                "tip": "$MqttSubscribe.Tip",
+                "cid": "com.totallyinformation.mqttplugin.MqttSubscribe",
+                "config": {
+                    "keyType": "default",
+                    "clickable": true,
+                    "platform": [
+                        "windows",
+                        "linux",
+                        "mac"
+                    ]
+                },
+                "style": {
+                    "icon": "mdi mdi-gesture-tap-button",
+                    "width": 240
+                },
+                "data": {
+                    "broker": "",
+                    "topic": ""
+                }
+            }
+        ]
+    },
+    "local": {
+        "en": {
+            "PluginName": "MqttPlugin",
+            "MqttSend": {
+                "Title": "MQTT Send",
+                "Tip": "Send an MQTT value to a topic on a broker",
+                "UI": {
+                    "broker": "MQTT Server (broker)",
+                    "topic": "MQTT topic to send to",
+                    "value": "MQTT value to send"
+                }
+            },
+            "MqttSubscribe": {
+                "Title": "MQTT Subscribe",
+                "Tip": "Subscribe (listen to) an MQTT topic and show its value",
+                "UI": {
+                    "broker": "MQTT Server (broker)",
+                    "topic": "MQTT topic to subscribe to"
+                }
+            }
+        }
+    }
+}
