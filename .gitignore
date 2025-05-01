@@ -4,3 +4,4 @@ logs
 .env
 package-lock.json
 com.totallyinformation.mqttplugin.plugin/backend
+info
