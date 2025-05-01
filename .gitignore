@@ -5,3 +5,4 @@ logs
 package-lock.json
 com.totallyinformation.mqttplugin.plugin/backend
 info-docs
+FlexBar-MQTT-Plugin.code-workspace
